@@ -10,10 +10,10 @@
            有 EGL 时可传 gl:=egl；osmesa 在部分 VMware 下会报
            'NoneType' object has no attribute 'glGetError'，不作为默认。
     注意：本模块不发布/订阅任何 ROS 话题，launch 只是把脚本拉起来，
-          main.py 的输出路径按 `--out` > 仓库内 docs/img > 当前工作目录 三级回退：
+          main.py 的输出路径按「命令行选项 > 仓库内 docs/img > 当前工作目录」三级回退：
           直接在包目录（src/chap8/mujoco_arm_3d）下运行会写仓库的 docs/img/；经 launch 启动时脚本被装到
           devel/lib/mujoco_arm_3d/，判断不到仓库结构，会退到当前工作目录（roslaunch 下通常是 ~/.ros）。
-          需要更新文档站配图请在包目录直接运行 python3 main.py，或用 --out 指定路径。
+          需要更新文档站配图请在包目录直接运行 python3 main.py，或用命令行选项指定输出路径。
   -->
   <arg name="gl" default="glfw"/>
 
